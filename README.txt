@@ -8,7 +8,7 @@ El objetivo principal del juego es servir como una herramienta pedagógica que i
 Este repositorio incluye todo el código fuente, la documentación técnica y los recursos necesarios para el desarrollo continuo del videojuego. 
 
 **Descripción**  
-Este repositorio alberga el desarrollo de un videojuego educativo para incentivar a estudiantes de la UAO a considerar el emprendimiento como opción de vida. fuente, documentación técnica y configuraciones de DevOps para garantizar una integración y despliegue continuos.
+Este repositorio alberga el desarrollo de un videojuego educativo para incentivar a estudiantes de la UAO a considerar el emprendimiento como opción de vida. fuente y documentación técnica 
 
 **Tabla de Contenidos**
 1. [Instalación]
