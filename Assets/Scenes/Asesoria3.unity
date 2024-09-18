@@ -474,9 +474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Asesoria 3
-
-'
+  m_text: Video 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee13d95e9a26a824f84955d8e1a548ef, type: 2}
   m_sharedMaterial: {fileID: -3722333192097920639, guid: ee13d95e9a26a824f84955d8e1a548ef, type: 2}
