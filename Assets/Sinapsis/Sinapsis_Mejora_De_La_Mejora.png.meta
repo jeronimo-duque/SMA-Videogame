@@ -1,0 +1,682 @@
+fileFormatVersion: 2
+guid: cbfeb2f2bf3fb414c835416a121be9bf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 349
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c62949f2f37954fa38662d27b7b2eb
+      internalID: 40063022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 349
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b560d3570e59d0641b54312ec283601c
+      internalID: -1348396810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1280861d2988c5e46a0bf89705ae0257
+      internalID: 2048794689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_3
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 332
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2dfca793d8e3c41b28ee606eeab530
+      internalID: -18638377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_4
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 296
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f90cc84006f2f24893c9998b65510d0
+      internalID: 919365440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_5
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 297
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e2607b709a044419ef8ffa680e04af
+      internalID: -1563151182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 297
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af1c55cdb8b17d41b416230bee4df2a
+      internalID: 49102936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 285
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1670ba5fccf0c504bae4f55a39ad5f5b
+      internalID: 144096477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_8
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 285
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3ad5708eb85db448bc337cd23d9559
+      internalID: 297256512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_9
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 300
+        width: 64
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df217e14189e7543baead3fa05e5e7d
+      internalID: -369481847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_10
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 246
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9c1ad535a6aa04ba4a3db53e5dd889
+      internalID: 1672093251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_11
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 262
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a44021c06e882a4093deca8ae44f0d5
+      internalID: 942569875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_12
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 234
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62708b0c9f66984bbfd962ef5993c16
+      internalID: -2107718217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_13
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 234
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686461f5ba88fe54d93a1d60378e97f6
+      internalID: 256228223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_14
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 252
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c0f037d55f1114ba3f4a024e0d59d1
+      internalID: -1249632519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_15
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 257
+        width: 36
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6afe343b84b964285e6819ece98c4b
+      internalID: 110365321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_16
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e930ddd426022409cdfff683ed5296
+      internalID: -1091725070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_17
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 234
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049c86f13fb65444fadfe970d4070b85
+      internalID: -2009906283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_18
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 186
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd984e1c7d5ac7748878a0cf47e97d99
+      internalID: 2082822130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_20
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 203
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c97350b6a40afc45be6066a3246965f
+      internalID: -2098853968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_21
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 200
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923e5fcc3f3b5a8418143c383e61c6c1
+      internalID: -890530944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_22
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 199
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fb9eb728422014980b4ee49daf628c
+      internalID: -248988646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_23
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 119
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc4cbfd386285d45af1922ad4ed671e
+      internalID: 622326122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_28
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 119
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad96f8328a4e66429ba52bf2501acf5
+      internalID: -1465116477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinapsis_Mejora_De_La_Mejora_29
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 119
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c0d9e8aabeea542942b2b566aa163c
+      internalID: 1482864751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sinapsis_Mejora_De_La_Mejora_0: 40063022
+      Sinapsis_Mejora_De_La_Mejora_1: -1348396810
+      Sinapsis_Mejora_De_La_Mejora_10: 1672093251
+      Sinapsis_Mejora_De_La_Mejora_11: 942569875
+      Sinapsis_Mejora_De_La_Mejora_12: -2107718217
+      Sinapsis_Mejora_De_La_Mejora_13: 256228223
+      Sinapsis_Mejora_De_La_Mejora_14: -1249632519
+      Sinapsis_Mejora_De_La_Mejora_15: 110365321
+      Sinapsis_Mejora_De_La_Mejora_16: -1091725070
+      Sinapsis_Mejora_De_La_Mejora_17: -2009906283
+      Sinapsis_Mejora_De_La_Mejora_18: 2082822130
+      Sinapsis_Mejora_De_La_Mejora_19: -993244406
+      Sinapsis_Mejora_De_La_Mejora_2: 2048794689
+      Sinapsis_Mejora_De_La_Mejora_20: -2098853968
+      Sinapsis_Mejora_De_La_Mejora_21: -890530944
+      Sinapsis_Mejora_De_La_Mejora_22: -248988646
+      Sinapsis_Mejora_De_La_Mejora_23: 622326122
+      Sinapsis_Mejora_De_La_Mejora_24: 877707570
+      Sinapsis_Mejora_De_La_Mejora_25: -904643588
+      Sinapsis_Mejora_De_La_Mejora_26: -1815302775
+      Sinapsis_Mejora_De_La_Mejora_27: 307113547
+      Sinapsis_Mejora_De_La_Mejora_28: -1465116477
+      Sinapsis_Mejora_De_La_Mejora_29: 1482864751
+      Sinapsis_Mejora_De_La_Mejora_3: -18638377
+      Sinapsis_Mejora_De_La_Mejora_4: 919365440
+      Sinapsis_Mejora_De_La_Mejora_5: -1563151182
+      Sinapsis_Mejora_De_La_Mejora_6: 49102936
+      Sinapsis_Mejora_De_La_Mejora_7: 144096477
+      Sinapsis_Mejora_De_La_Mejora_8: 297256512
+      Sinapsis_Mejora_De_La_Mejora_9: -369481847
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
