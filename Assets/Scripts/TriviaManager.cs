@@ -19,6 +19,7 @@ public class TriviaManager : MonoBehaviour
 
     [Space(10)]
     [Header("Feedback UI")]
+    [SerializeField] private GameObject triviaUI;
     [SerializeField] private GameObject positiveFeedbackUI;
     [SerializeField] private TextMeshProUGUI positiveFeedbackTitle;
     [SerializeField] private TextMeshProUGUI positiveFeedbackMessage;
@@ -95,5 +96,15 @@ public class TriviaManager : MonoBehaviour
             questions[currentQuestion].SetActive(true);
             positiveFeedbackUI.SetActive(false);
         }
+    }
+
+    public void StartTrivia()
+    {
+        triviaUI.gameObject.SetActive(true);
+    }
+
+    public void HideTrivia()
+    {
+        triviaUI.gameObject.SetActive(false);
     }
 }

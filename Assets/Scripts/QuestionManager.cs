@@ -38,4 +38,9 @@ public class QuestionManager : MonoBehaviour
 
 
     }
+
+    public void SetCorrectAnswer(TextMeshProUGUI correctAnswerText)
+    {
+        correctAnswer = correctAnswerText;
+    }
 }
