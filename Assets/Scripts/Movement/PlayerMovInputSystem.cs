@@ -8,13 +8,18 @@ public class PlayerMovInputSystem : MonoBehaviour
     public float speed = 5.0f;
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
-    private Animator animator;
+    
     private Vector2 moveInput;
 
     // Referencia al InputAction
     private PlayerInput playerInputActions;
 
     public bool canMove = true;
+
+    [Space(8)]
+    [Header("Animations")]
+    [SerializeField] private Animator animator;
+    private Vector2 lastDirection = Vector2.down;
 
     void Awake()
     {
@@ -38,21 +43,22 @@ public class PlayerMovInputSystem : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // Actualizamos los parámetros del Animator
-        animator.SetFloat("Horizontal", moveInput.x);
-        animator.SetFloat("Vertical", moveInput.y);
-        animator.SetFloat("Speed", moveVelocity.magnitude);
 
         if (moveInput != Vector2.zero)
         {
             moveInput.Normalize();
-            animator.SetFloat("UltimoX", moveInput.x);
-            animator.SetFloat("UltimoY", moveInput.y);
+            lastDirection = moveInput.normalized;
+        }
+        else
+        {
+            // Put the idle animation with player orientation.
+            animator.SetFloat("MovX", lastDirection.x);
+            animator.SetFloat("MovY", lastDirection.y);
+            animator.SetBool("IsMove", false);
         }
     }
 
@@ -60,6 +66,15 @@ public class PlayerMovInputSystem : MonoBehaviour
     {
         moveVelocity = moveInput * speed;
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+
+ 
+
+        // Update the animator params to movement.
+        animator.SetFloat("MovX", moveInput.x);
+        animator.SetFloat("MovY", moveInput.y);
+
+        animator.SetBool("IsMove", moveInput.magnitude > 0);
+
     }
 
     void OnMovePerformed(InputAction.CallbackContext context)
@@ -75,6 +90,7 @@ public class PlayerMovInputSystem : MonoBehaviour
         if (canMove)
         {
             moveInput = Vector2.zero;
+            
         }
     }
 }
