@@ -2,13 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class SceneLoader : MonoBehaviour
 {
+    public VideoPlayer videoPlayer;  
+    public string sceneToLoad;       
 
-    public void LoadScene(string sceneName)
+    public void PlayVideoAndLoadScene()
     {
-        Debug.Log($"Go to {sceneName}");
-        SceneManager.LoadScene(sceneName);
+        
+        videoPlayer.Play();
+
+        
+        videoPlayer.loopPointReached += OnVideoFinished;
+    }
+
+    private void OnVideoFinished(VideoPlayer vp)
+    {
+        
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
