@@ -5,29 +5,37 @@ using UnityEngine;
 public class CharacterDialogue : MonoBehaviour
 {
     public GameObject canvasDialogo;
-    private bool isPlayerInRange = false;
+    public GameObject player; 
+    private PlayerMovInputSystem playerMovement; 
+    private Animator playerAnimator;
+    private bool isDialogueActive = false; // Para evitar reactivar el trigger
+
+    private void Start()
+    {
+        playerMovement = player.GetComponent<PlayerMovInputSystem>(); 
+        playerAnimator = player.GetComponent<Animator>(); 
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isDialogueActive)
         {
-            isPlayerInRange = true;
+            isDialogueActive = true;
+            canvasDialogo.SetActive(true); // Activa el canvas de diálogo
+            playerMovement.canMove = false; // Bloquea el movimiento del jugador
+
+            // Configura la animación en estado idle
+            playerAnimator.SetFloat("MovX", 0);
+            playerAnimator.SetFloat("MovY", 0);
+            playerAnimator.SetBool("IsMove", false); 
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public void EndDialogue()
     {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInRange = false;
-        }
-    }
-
-    private void Update()
-    {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.F))
-        {
-            canvasDialogo.SetActive(true);
-        }
+        canvasDialogo.SetActive(false); // Desactiva el canvas de diálogo
+        playerMovement.canMove = true; // Permite que el jugador vuelva a moverse
+        GetComponent<Collider2D>().enabled = false; // Desactiva el trigger para que no se reactive
+        isDialogueActive = false; // Permite que el trigger no se vuelva a activar
     }
 }

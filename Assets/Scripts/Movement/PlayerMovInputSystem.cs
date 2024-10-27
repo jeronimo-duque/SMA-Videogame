@@ -8,7 +8,6 @@ public class PlayerMovInputSystem : MonoBehaviour
     public float speed = 5.0f;
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
-    
     private Vector2 moveInput;
 
     // Referencia al InputAction
@@ -47,6 +46,15 @@ public class PlayerMovInputSystem : MonoBehaviour
 
     void Update()
     {
+        if (!canMove)
+        {
+            // Si no puede moverse, se asegura de que el input y las animaciones estén detenidas
+            moveInput = Vector2.zero;
+            animator.SetFloat("MovX", lastDirection.x);
+            animator.SetFloat("MovY", lastDirection.y);
+            animator.SetBool("IsMove", false);
+            return;
+        }
 
         if (moveInput != Vector2.zero)
         {
@@ -55,7 +63,7 @@ public class PlayerMovInputSystem : MonoBehaviour
         }
         else
         {
-            // Put the idle animation with player orientation.
+            // Animación de idle con orientación
             animator.SetFloat("MovX", lastDirection.x);
             animator.SetFloat("MovY", lastDirection.y);
             animator.SetBool("IsMove", false);
@@ -64,17 +72,21 @@ public class PlayerMovInputSystem : MonoBehaviour
 
     void FixedUpdate()
     {
-        moveVelocity = moveInput * speed;
-        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        if (canMove)
+        {
+            moveVelocity = moveInput * speed;
+            rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
 
- 
-
-        // Update the animator params to movement.
-        animator.SetFloat("MovX", moveInput.x);
-        animator.SetFloat("MovY", moveInput.y);
-
-        animator.SetBool("IsMove", moveInput.magnitude > 0);
-
+            // Actualizar los parámetros del animador para el movimiento
+            animator.SetFloat("MovX", moveInput.x);
+            animator.SetFloat("MovY", moveInput.y);
+            animator.SetBool("IsMove", moveInput.magnitude > 0);
+        }
+        else
+        {
+            // Si no puede moverse, detener el movimiento del Rigidbody
+            rb.velocity = Vector2.zero;
+        }
     }
 
     void OnMovePerformed(InputAction.CallbackContext context)
@@ -90,7 +102,6 @@ public class PlayerMovInputSystem : MonoBehaviour
         if (canMove)
         {
             moveInput = Vector2.zero;
-            
         }
     }
 }
