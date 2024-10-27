@@ -30,6 +30,9 @@ public class CharacterDialogue : MonoBehaviour
             canvasDialogo.SetActive(true);
             playerMovement.canMove = false;
 
+            // Oculta el joystick al iniciar el diálogo
+            playerMovement.HideJoystick();
+
             playerAnimator.SetFloat("MovX", 0);
             playerAnimator.SetFloat("MovY", 0);
             playerAnimator.SetBool("IsMove", false);
@@ -41,6 +44,9 @@ public class CharacterDialogue : MonoBehaviour
         canvasDialogo.SetActive(false);
         playerMovement.canMove = true;
         isDialogueActive = false;
+
+        // Muestra el joystick al finalizar el diálogo
+        playerMovement.ShowJoystick();
 
         // Inicia el minijuego solo si es el primer diálogo y está configurado para hacerlo
         if (startMinigameOnEnd && minigameController != null)

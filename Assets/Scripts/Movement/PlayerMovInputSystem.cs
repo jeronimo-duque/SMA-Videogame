@@ -7,10 +7,11 @@ public class PlayerMovInputSystem : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rb;
-    private Vector2 moveVelocity;
     private Vector2 moveInput;
 
-    // Referencia al InputAction
+    [SerializeField] private FixedJoystick joystick;
+    private CanvasGroup joystickCanvasGroup;
+
     private PlayerInput playerInputActions;
 
     public bool canMove = true;
@@ -23,6 +24,7 @@ public class PlayerMovInputSystem : MonoBehaviour
     void Awake()
     {
         playerInputActions = new PlayerInput();
+        joystickCanvasGroup = joystick.GetComponent<CanvasGroup>();
     }
 
     void OnEnable()
@@ -48,7 +50,6 @@ public class PlayerMovInputSystem : MonoBehaviour
     {
         if (!canMove)
         {
-            // Si no puede moverse, se asegura de que el input y las animaciones estén detenidas
             moveInput = Vector2.zero;
             animator.SetFloat("MovX", lastDirection.x);
             animator.SetFloat("MovY", lastDirection.y);
@@ -56,14 +57,29 @@ public class PlayerMovInputSystem : MonoBehaviour
             return;
         }
 
-        if (moveInput != Vector2.zero)
+        // Detecta la entrada del joystick
+        Vector2 joystickInput = joystick != null ? new Vector2(joystick.Horizontal, joystick.Vertical) : Vector2.zero;
+
+        // Si el joystick no tiene entrada, establece moveInput en cero
+        if (joystick != null && Mathf.Abs(joystick.Horizontal) < 0.1f && Mathf.Abs(joystick.Vertical) < 0.1f)
         {
-            moveInput.Normalize();
-            lastDirection = moveInput.normalized;
+            moveInput = Vector2.zero;
         }
         else
         {
-            // Animación de idle con orientación
+            moveInput = joystickInput.normalized;
+            lastDirection = moveInput;
+        }
+
+        // Configura las animaciones de movimiento o idle
+        if (moveInput != Vector2.zero)
+        {
+            animator.SetFloat("MovX", moveInput.x);
+            animator.SetFloat("MovY", moveInput.y);
+            animator.SetBool("IsMove", true);
+        }
+        else
+        {
             animator.SetFloat("MovX", lastDirection.x);
             animator.SetFloat("MovY", lastDirection.y);
             animator.SetBool("IsMove", false);
@@ -72,20 +88,14 @@ public class PlayerMovInputSystem : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (canMove)
+        // Solo mueve al jugador si moveInput tiene valores significativos
+        if (canMove && moveInput != Vector2.zero)
         {
-            moveVelocity = moveInput * speed;
-            rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
-
-            // Actualizar los parámetros del animador para el movimiento
-            animator.SetFloat("MovX", moveInput.x);
-            animator.SetFloat("MovY", moveInput.y);
-            animator.SetBool("IsMove", moveInput.magnitude > 0);
+            rb.velocity = moveInput * speed;
         }
         else
         {
-            // Si no puede moverse, detener el movimiento del Rigidbody
-            rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero; // Fuerza el Rigidbody2D a detenerse completamente
         }
     }
 
@@ -102,6 +112,26 @@ public class PlayerMovInputSystem : MonoBehaviour
         if (canMove)
         {
             moveInput = Vector2.zero;
+            rb.velocity = Vector2.zero; // Detiene el Rigidbody2D completamente
+        }
+    }
+
+    // Métodos para ocultar y mostrar el joystick
+    public void HideJoystick()
+    {
+        if (joystickCanvasGroup != null)
+        {
+            joystickCanvasGroup.alpha = 0;  // Oculta el joystick
+            joystickCanvasGroup.interactable = false;
+        }
+    }
+
+    public void ShowJoystick()
+    {
+        if (joystickCanvasGroup != null)
+        {
+            joystickCanvasGroup.alpha = 1;  // Muestra el joystick
+            joystickCanvasGroup.interactable = true;
         }
     }
 }
