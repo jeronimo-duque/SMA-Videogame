@@ -5,37 +5,53 @@ using UnityEngine;
 public class CharacterDialogue : MonoBehaviour
 {
     public GameObject canvasDialogo;
-    public GameObject player; 
-    private PlayerMovInputSystem playerMovement; 
+    public GameObject player;
+    private PlayerMovInputSystem playerMovement;
     private Animator playerAnimator;
-    private bool isDialogueActive = false; // Para evitar reactivar el trigger
+    private bool isDialogueActive = false;
+    private bool hasTriggered = false;
+    public Collider2D dialogueTrigger;
+    public BrainstormingMinigameController minigameController; // Referencia al minijuego
+    public bool startMinigameOnEnd = false; // Controla si se debe iniciar el minijuego tras el primer diálogo
+    public Collider2D nextDialogueTrigger; // Trigger del segundo diálogo
 
     private void Start()
     {
-        playerMovement = player.GetComponent<PlayerMovInputSystem>(); 
-        playerAnimator = player.GetComponent<Animator>(); 
+        playerMovement = player.GetComponent<PlayerMovInputSystem>();
+        playerAnimator = player.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !isDialogueActive)
+        if (other.CompareTag("Player") && !isDialogueActive && !hasTriggered)
         {
+            hasTriggered = true;
             isDialogueActive = true;
-            canvasDialogo.SetActive(true); // Activa el canvas de diálogo
-            playerMovement.canMove = false; // Bloquea el movimiento del jugador
+            canvasDialogo.SetActive(true);
+            playerMovement.canMove = false;
 
-            // Configura la animación en estado idle
             playerAnimator.SetFloat("MovX", 0);
             playerAnimator.SetFloat("MovY", 0);
-            playerAnimator.SetBool("IsMove", false); 
+            playerAnimator.SetBool("IsMove", false);
         }
     }
 
     public void EndDialogue()
     {
-        canvasDialogo.SetActive(false); // Desactiva el canvas de diálogo
-        playerMovement.canMove = true; // Permite que el jugador vuelva a moverse
-        GetComponent<Collider2D>().enabled = false; // Desactiva el trigger para que no se reactive
-        isDialogueActive = false; // Permite que el trigger no se vuelva a activar
+        canvasDialogo.SetActive(false);
+        playerMovement.canMove = true;
+        isDialogueActive = false;
+
+        // Inicia el minijuego solo si es el primer diálogo y está configurado para hacerlo
+        if (startMinigameOnEnd && minigameController != null)
+        {
+            minigameController.StartMinigameOnce();
+        }
+
+        // Activa el segundo trigger después del minijuego
+        if (nextDialogueTrigger != null)
+        {
+            nextDialogueTrigger.enabled = true;
+        }
     }
 }
