@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1837352145}
-  sceneToLoad: sinapsis
+  sceneToLoad: Sinapsis
 --- !u!114 &164331354
 MonoBehaviour:
   m_ObjectHideFlags: 0

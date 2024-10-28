@@ -207,9 +207,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7928641}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_TargetAssemblyTypeName: SceneLoader, Scripts
+        m_MethodName: PlayVideoAndLoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -268,6 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed03e63c6c492043b9a2c91f0ad2bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 0}
+  sceneToLoad: Asesoria2
 --- !u!1 &166969715
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,9 +624,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 341884790}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_TargetAssemblyTypeName: SceneLoader, Scripts
+        m_MethodName: PlayVideoAndLoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -683,6 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed03e63c6c492043b9a2c91f0ad2bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 0}
+  sceneToLoad: Home
 --- !u!1 &432271661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,9 +1908,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1909218429}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_TargetAssemblyTypeName: SceneLoader, Scripts
+        m_MethodName: PlayVideoAndLoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1965,6 +1969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed03e63c6c492043b9a2c91f0ad2bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 0}
+  sceneToLoad: Asesoria1
 --- !u!1 &2038671552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,9 +2056,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2038671557}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_TargetAssemblyTypeName: SceneLoader, Scripts
+        m_MethodName: PlayVideoAndLoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2111,6 +2117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed03e63c6c492043b9a2c91f0ad2bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 0}
+  sceneToLoad: Asesoria3
 --- !u!1 &2069561671
 GameObject:
   m_ObjectHideFlags: 0
