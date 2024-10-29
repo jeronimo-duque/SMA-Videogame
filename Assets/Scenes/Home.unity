@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 0}
-  sceneToLoad: Quests
+  sceneToLoad: "Cafeter\xEDa"
 --- !u!114 &143638124
 MonoBehaviour:
   m_ObjectHideFlags: 0
