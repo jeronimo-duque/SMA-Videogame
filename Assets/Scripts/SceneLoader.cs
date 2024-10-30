@@ -9,12 +9,12 @@ public class SceneLoader : MonoBehaviour
     public VideoPlayer videoPlayer;  // Opcional: asignar un VideoPlayer en el Inspector si se desea reproducir video
     public string sceneToLoad;       // Nombre de la escena a cargar
 
-    // Método que puedes asignar al botón
+    // Mï¿½todo que puedes asignar al botï¿½n
     public void PlayVideoAndLoadScene()
     {
         if (videoPlayer != null)
         {
-            videoPlayer.Play();  // Reproduce el video si está asignado
+            videoPlayer.Play();  // Reproduce el video si estï¿½ asignado
             videoPlayer.loopPointReached += OnVideoFinished; // Llama a OnVideoFinished cuando el video termina
         }
         else
@@ -24,13 +24,13 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    // Método que se llama cuando el video finaliza
+    // Mï¿½todo que se llama cuando el video finaliza
     private void OnVideoFinished(VideoPlayer vp)
     {
         LoadSceneDirectly();
     }
 
-    // Método para cargar la escena directamente
+    // Mï¿½todo para cargar la escena directamente
     private void LoadSceneDirectly()
     {
         UnityEngine.Debug.Log($"Cargando la escena: {sceneToLoad}");

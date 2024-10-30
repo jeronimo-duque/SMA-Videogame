@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: First minigame_0
+      name: Note1
       rect:
         serializedVersion: 2
         x: 0
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First minigame_1
+      name: Note2
       rect:
         serializedVersion: 2
         x: 35
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First minigame_2
+      name: Note3
       rect:
         serializedVersion: 2
         x: 70
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First minigame_3
+      name: Note4
       rect:
         serializedVersion: 2
         x: 105
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First minigame_4
+      name: Note5
       rect:
         serializedVersion: 2
         x: 0
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First minigame_5
+      name: Note6
       rect:
         serializedVersion: 2
         x: 35
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First minigame_6
+      name: Note7
       rect:
         serializedVersion: 2
         x: 70
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First minigame_7
+      name: Note8
       rect:
         serializedVersion: 2
         x: 105
@@ -367,14 +367,14 @@ TextureImporter:
       Broken bulb: -89351674
       Bulb_off: -1631335391
       Bulb_on: -600275116
-      First minigame_0: 278359160
-      First minigame_1: -1208771286
-      First minigame_2: -181238395
-      First minigame_3: -1444871090
-      First minigame_4: 804425073
-      First minigame_5: 2127127450
-      First minigame_6: 50425849
-      First minigame_7: 470268880
+      Note1: 278359160
+      Note2: -1208771286
+      Note3: -181238395
+      Note4: -1444871090
+      Note5: 804425073
+      Note6: 2127127450
+      Note7: 50425849
+      Note8: 470268880
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

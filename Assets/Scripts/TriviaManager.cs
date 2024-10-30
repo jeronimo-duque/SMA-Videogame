@@ -35,10 +35,6 @@ public class TriviaManager : MonoBehaviour
     [SerializeField] private GameObject winFeedbackUI;
 
 
-    private void Awake()
-    {
-        Debug.Log(questions.Count);
-    }
     public void ShowNegativeFeedback(string title, string message, string suggestion)
     {
         Debug.Log("Bad");
