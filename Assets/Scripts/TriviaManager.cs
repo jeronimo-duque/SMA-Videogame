@@ -85,6 +85,7 @@ public class TriviaManager : MonoBehaviour
             {
                 Debug.Log("GG");
                 winFeedbackUI.SetActive(true);
+                ScoreManager.Instance.AddStar(); //Progress Manager.
                 return;
             }
             

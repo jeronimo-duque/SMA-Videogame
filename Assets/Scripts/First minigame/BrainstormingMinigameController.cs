@@ -94,5 +94,6 @@ public class BrainstormingMinigameController : MonoBehaviour, IMinigameControlle
         }
 
         UnityEngine.Debug.Log("GANASTE");
+        ScoreManager.Instance.AddStar(); //Progress Manager.
     }
 }

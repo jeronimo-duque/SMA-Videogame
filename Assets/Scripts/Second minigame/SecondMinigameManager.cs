@@ -69,6 +69,7 @@ public class SecondMinigameManager : MonoBehaviour, IMinigameController
         _isMinigameComplete = true;
         _countdownInterface.SetActive(false);
         UnityEngine.Debug.Log("GANASTE, SOS MUY MAKIA");
+        ScoreManager.Instance.AddStar(); //Progress Manager.
     }
 
     private void GenerateRandomSpawnPoint()
