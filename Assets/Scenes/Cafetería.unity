@@ -3644,6 +3644,52 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &716331272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716331274}
+  - component: {fileID: 716331273}
+  m_Layer: 0
+  m_Name: NextScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &716331273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716331272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed03e63c6c492043b9a2c91f0ad2bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 0}
+  sceneToLoad: Sinapsis
+--- !u!4 &716331274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716331272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3153772, y: 1.5090188, z: -0.31672347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &729275564
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,6 +4912,8 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 0563cd7d45cbea547a32f70885213c45, type: 3}
   textSpeed: 0
+  sceneLoader: {fileID: 716331273}
+  isFinalDialogue: 1
 --- !u!114 &1108257799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7869,6 +7917,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0563cd7d45cbea547a32f70885213c45, type: 3}
   - {fileID: 21300000, guid: f23556c1aed25aa439d8448e2299349a, type: 3}
   textSpeed: 0
+  sceneLoader: {fileID: 0}
+  isFinalDialogue: 0
 --- !u!1 &1929031384
 GameObject:
   m_ObjectHideFlags: 0
@@ -11569,7 +11619,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2538760179387453042, guid: a34f5e00cb9a16c4596d8de6af7e0abd, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8485059883609208912, guid: a34f5e00cb9a16c4596d8de6af7e0abd, type: 3}
       insertIndex: -1
@@ -11597,3 +11648,4 @@ SceneRoots:
   - {fileID: 1108257802}
   - {fileID: 34984673}
   - {fileID: 921920221}
+  - {fileID: 716331274}

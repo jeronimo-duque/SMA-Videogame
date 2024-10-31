@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI; // Importa el namespace correcto para UI
+using UnityEngine.UI;
 
 public class DialgoScript : MonoBehaviour
 {
     public GameObject Player;
-    public TextMeshProUGUI textoDialogo; // Campo para el texto del diálogo
-    public TextMeshProUGUI nombrePersonajeTexto; // Campo para el nombre del personaje
-    public UnityEngine.UI.Image personajeImagen; // Campo para la imagen del personaje (usa el namespace específico)
-    public string[] lines; // Líneas de diálogo
-    public string[] nombres; // Nombres de los personajes correspondientes a cada línea de diálogo
-    public Sprite[] sprites; // Sprites de los personajes correspondientes a cada línea de diálogo
+    public TextMeshProUGUI textoDialogo;
+    public TextMeshProUGUI nombrePersonajeTexto;
+    public UnityEngine.UI.Image personajeImagen;
+    public string[] lines;
+    public string[] nombres;
+    public Sprite[] sprites;
     public float textSpeed;
+    public SceneLoader sceneLoader; // Referencia al SceneLoader
+    public bool isFinalDialogue = false; // Indica si este es el último diálogo
 
     private int index;
     private PlayerMovInputSystem inpSys;
@@ -22,10 +24,11 @@ public class DialgoScript : MonoBehaviour
     {
         inpSys = Player.GetComponent<PlayerMovInputSystem>();
         textoDialogo.text = string.Empty;
-        nombrePersonajeTexto.text = string.Empty; // Iniciar el nombre vacío
-        personajeImagen.sprite = null; // Iniciar la imagen vacía
+        nombrePersonajeTexto.text = string.Empty;
+        personajeImagen.sprite = null;
         StartDialogue();
-        inpSys.canMove = false;
+        inpSys.canMove = false; // Bloquea el movimiento del jugador
+        inpSys.HideJoystick(); // Oculta el joystick al iniciar el diálogo
     }
 
     void Update()
@@ -47,9 +50,9 @@ public class DialgoScript : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
-        SetDialogueUI(); // Configura el nombre y la imagen del personaje
+        SetDialogueUI();
         StartCoroutine(TypeLine());
-        InvokeRepeating("AutoAdvanceDialogue", 15f, 15f); // Avanza cada 15 segundos
+        InvokeRepeating("AutoAdvanceDialogue", 15f, 15f);
     }
 
     IEnumerator TypeLine()
@@ -67,7 +70,7 @@ public class DialgoScript : MonoBehaviour
         if (index < lines.Length - 1)
         {
             index++;
-            SetDialogueUI(); // Configura el siguiente nombre y la imagen del personaje
+            SetDialogueUI();
             textoDialogo.text = string.Empty;
             StartCoroutine(TypeLine());
         }
@@ -79,7 +82,6 @@ public class DialgoScript : MonoBehaviour
 
     void SetDialogueUI()
     {
-        // Configura el nombre y el sprite correspondiente a la línea actual
         if (index < nombres.Length)
         {
             nombrePersonajeTexto.text = nombres[index];
@@ -93,7 +95,7 @@ public class DialgoScript : MonoBehaviour
 
     void AutoAdvanceDialogue()
     {
-        if (textoDialogo.text == lines[index]) // Solo avanza si la línea completa ya está mostrada
+        if (textoDialogo.text == lines[index])
         {
             NextLine();
         }
@@ -101,9 +103,19 @@ public class DialgoScript : MonoBehaviour
 
     void EndDialogue()
     {
-        CancelInvoke("AutoAdvanceDialogue"); // Cancela el autoavance
+        CancelInvoke("AutoAdvanceDialogue");
         gameObject.SetActive(false);
-        inpSys.canMove = true;
-        FindObjectOfType<CharacterDialogue>().EndDialogue();
+        inpSys.canMove = true; // Permite el movimiento del jugador
+        inpSys.ShowJoystick(); // Muestra el joystick al finalizar el diálogo
+
+        // Verifica si es el último diálogo antes de cambiar de escena
+        if (isFinalDialogue && sceneLoader != null)
+        {
+            sceneLoader.PlayVideoAndLoadScene();
+        }
+        else
+        {
+            FindObjectOfType<CharacterDialogue>().EndDialogue();
+        }
     }
 }
