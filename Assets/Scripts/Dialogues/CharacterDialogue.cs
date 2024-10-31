@@ -11,10 +11,7 @@ public class CharacterDialogue : MonoBehaviour
     private bool isDialogueActive = false;
     private bool hasTriggered = false;
     public Collider2D dialogueTrigger;
-    public BrainstormingMinigameController minigameController; // Referencia al minijuego
-    public bool startMinigameOnEnd = false; // Controla si se debe iniciar el minijuego tras el primer diálogo
-    private bool hasMinigameStarted = false; // Controla si el minijuego ya ha comenzado
-    public Collider2D nextDialogueTrigger; // Trigger del segundo diálogo
+    public Collider2D nextDialogueTrigger; // Trigger del siguiente diálogo en la misma escena
 
     private void Start()
     {
@@ -49,14 +46,7 @@ public class CharacterDialogue : MonoBehaviour
         // Muestra el joystick al finalizar el diálogo
         playerMovement.ShowJoystick();
 
-        // Inicia el minijuego solo si es el primer diálogo y está configurado para hacerlo
-        if (startMinigameOnEnd && minigameController != null && !hasMinigameStarted)
-        {
-            minigameController.StartMinigameOnce();
-            hasMinigameStarted = true; // Asegura que el minijuego solo inicie una vez
-        }
-
-        // Activa el segundo trigger después del minijuego
+        // Activa el siguiente diálogo en la misma escena si está configurado
         if (nextDialogueTrigger != null)
         {
             nextDialogueTrigger.enabled = true;

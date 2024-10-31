@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class BrainstormingMinigameController : MonoBehaviour
+public class BrainstormingMinigameController : MonoBehaviour, IMinigameController
 {
     [SerializeField] private int _currentScore = 0;
     [SerializeField] private int _scoreToWin = 10;
@@ -69,7 +69,6 @@ public class BrainstormingMinigameController : MonoBehaviour
 
     public void StartMinigameOnce()
     {
-        // Inicia el minijuego solo si no está activo
         if (!_isMinigameActive)
         {
             _spawnCoroutine = StartCoroutine(GeneateRandomBulbs());

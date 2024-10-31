@@ -16,6 +16,7 @@ public class DialgoScript : MonoBehaviour
     public float textSpeed;
     public SceneLoader sceneLoader; // Referencia al SceneLoader
     public bool isFinalDialogue = false; // Indica si este es el último diálogo
+    public MonoBehaviour optionalMinigameController; // Referencia opcional a cualquier controlador de minijuego
 
     private int index;
     private PlayerMovInputSystem inpSys;
@@ -107,6 +108,16 @@ public class DialgoScript : MonoBehaviour
         gameObject.SetActive(false);
         inpSys.canMove = true; // Permite el movimiento del jugador
         inpSys.ShowJoystick(); // Muestra el joystick al finalizar el diálogo
+
+        // Inicia el minijuego opcionalmente
+        if (optionalMinigameController is BrainstormingMinigameController brainstormingMinigame)
+        {
+            brainstormingMinigame.StartMinigameOnce();
+        }
+        else if (optionalMinigameController is SecondMinigameManager secondMinigame)
+        {
+            secondMinigame.StartMinigameOnce();
+        }
 
         // Verifica si es el último diálogo antes de cambiar de escena
         if (isFinalDialogue && sceneLoader != null)

@@ -3175,6 +3175,14 @@ MonoBehaviour:
   - "Bien, lo primero que haremos es inscribirlos y asignarles un mentor que los
     guiar\xE1 en cada etapa. Esta es solo la primera parte de su viaje, y estamos
     aqu\xED para asegurarnos de que tengan todo lo que necesitan para tener \xE9xito."
+  - "Carlos, tras explicar las rutas de emprendimiento en Sinapsis UAO, introduce
+    a los estudiantes a una serie de desaf\xEDos y minijuegos que simulan situaciones
+    reales de la creaci\xF3n y gesti\xF3n de un negocio. Estos minijuegos permitir\xE1n
+    a los estudiantes aprender y poner en pr\xE1ctica los conceptos adquiridos."
+  - "Ahora que entienden las rutas, es momento de que se pongan manos a la obra.
+    Les propondr\xE9 algunos desaf\xEDos que simulan las situaciones que enfrentar\xE1n
+    en el camino del emprendimiento. Cada misi\xF3n les ense\xF1ar\xE1 algo valioso
+    que podr\xE1n aplicar en su proyecto."
   nombres:
   - Carlos
   - Santiago
@@ -3201,6 +3209,8 @@ MonoBehaviour:
   - Carlos
   - Santiago
   - Carlos
+  - 
+  - Carlos
   sprites:
   - {fileID: 21300000, guid: 1aac6d6b74d408749b4d38994ce316f6, type: 3}
   - {fileID: 21300000, guid: 0563cd7d45cbea547a32f70885213c45, type: 3}
@@ -3224,11 +3234,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0563cd7d45cbea547a32f70885213c45, type: 3}
   - {fileID: 21300000, guid: 1aac6d6b74d408749b4d38994ce316f6, type: 3}
   - {fileID: 21300000, guid: 46774e113e32dc34db06cf42bf6627c7, type: 3}
+  - {fileID: 21300000, guid: 1aac6d6b74d408749b4d38994ce316f6, type: 3}
   - {fileID: 21300000, guid: 0563cd7d45cbea547a32f70885213c45, type: 3}
+  - {fileID: 21300000, guid: 1aac6d6b74d408749b4d38994ce316f6, type: 3}
+  - {fileID: 21300000, guid: 829efc9bb91557f4f9ece401117cd945, type: 3}
   - {fileID: 21300000, guid: 1aac6d6b74d408749b4d38994ce316f6, type: 3}
   textSpeed: 0
   sceneLoader: {fileID: 0}
   isFinalDialogue: 0
+  optionalMinigameController: {fileID: 1439903226}
 --- !u!114 &406535915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5089,10 +5103,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -2.6697726, y: 1.3630426}
+    - - {x: 3.008243, y: 1.893636}
+      - {x: 0.49874485, y: 1.9171511}
+      - {x: 0.64184475, y: 1.2553548}
+      - {x: -2.6697726, y: 1.3630426}
       - {x: -2.7064426, y: -1.4641556}
-      - {x: -2.5878913, y: -5.7920976}
-      - {x: 2.0086732, y: -5.948162}
+      - {x: -2.5689638, y: -4.9119906}
+      - {x: 0.655391, y: -4.9450297}
+      - {x: 0.56323516, y: -6.0076623}
       - {x: 7.8387074, y: -5.944612}
       - {x: 7.7826476, y: -4.462514}
       - {x: 2.9084818, y: -4.4588404}
@@ -5339,8 +5357,6 @@ MonoBehaviour:
   canvasDialogo: {fileID: 406535913}
   player: {fileID: 382683256}
   dialogueTrigger: {fileID: 1261267701}
-  minigameController: {fileID: 0}
-  startMinigameOnEnd: 1
   nextDialogueTrigger: {fileID: 0}
 --- !u!61 &1261267701
 BoxCollider2D:
@@ -6535,9 +6551,7 @@ MonoBehaviour:
   canvasDialogo: {fileID: 1636877833}
   player: {fileID: 382683256}
   dialogueTrigger: {fileID: 1409719970}
-  minigameController: {fileID: 0}
-  startMinigameOnEnd: 1
-  nextDialogueTrigger: {fileID: 0}
+  nextDialogueTrigger: {fileID: 1261267701}
 --- !u!61 &1409719970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7186,6 +7200,7 @@ MonoBehaviour:
   textSpeed: 0
   sceneLoader: {fileID: 0}
   isFinalDialogue: 0
+  optionalMinigameController: {fileID: 0}
 --- !u!114 &1636877835
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -239,8 +239,6 @@ MonoBehaviour:
   canvasDialogo: {fileID: 1861238130}
   player: {fileID: 1033279274}
   dialogueTrigger: {fileID: 34984672}
-  minigameController: {fileID: 312032190}
-  startMinigameOnEnd: 1
   nextDialogueTrigger: {fileID: 921920220}
 --- !u!61 &34984672
 BoxCollider2D:
@@ -4189,8 +4187,6 @@ MonoBehaviour:
   canvasDialogo: {fileID: 1108257797}
   player: {fileID: 1033279274}
   dialogueTrigger: {fileID: 921920220}
-  minigameController: {fileID: 0}
-  startMinigameOnEnd: 0
   nextDialogueTrigger: {fileID: 0}
 --- !u!61 &921920220
 BoxCollider2D:
@@ -4914,6 +4910,7 @@ MonoBehaviour:
   textSpeed: 0
   sceneLoader: {fileID: 716331273}
   isFinalDialogue: 1
+  optionalMinigameController: {fileID: 0}
 --- !u!114 &1108257799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7919,6 +7916,7 @@ MonoBehaviour:
   textSpeed: 0
   sceneLoader: {fileID: 0}
   isFinalDialogue: 0
+  optionalMinigameController: {fileID: 312032190}
 --- !u!1 &1929031384
 GameObject:
   m_ObjectHideFlags: 0
