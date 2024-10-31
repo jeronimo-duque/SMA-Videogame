@@ -52,7 +52,7 @@ public class DialgoScript : MonoBehaviour
         index = 0;
         SetDialogueUI();
         StartCoroutine(TypeLine());
-        InvokeRepeating("AutoAdvanceDialogue", 15f, 15f);
+        InvokeRepeating("AutoAdvanceDialogue", 30f, 30f);
     }
 
     IEnumerator TypeLine()
