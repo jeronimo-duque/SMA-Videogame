@@ -26,6 +26,8 @@ public class SecondMinigameManager : MonoBehaviour, IMinigameController
     [SerializeField] private GameObject _countdownInterface;
     [SerializeField] private TextMeshProUGUI _countDownText;
 
+    public GameObject nextDialogueTrigger;
+
     void Start()
     {
         GenerateRandomSpawnPoint();
@@ -70,6 +72,7 @@ public class SecondMinigameManager : MonoBehaviour, IMinigameController
         _countdownInterface.SetActive(false);
         UnityEngine.Debug.Log("GANASTE, SOS MUY MAKIA");
         ScoreManager.Instance.AddStar(); //Progress Manager.
+        nextDialogueTrigger.SetActive(true);
     }
 
     private void GenerateRandomSpawnPoint()
