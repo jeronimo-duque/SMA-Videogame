@@ -1722,7 +1722,7 @@ SortingGroup:
   m_GameObject: {fileID: 321096008}
   m_Enabled: 1
   m_SortingLayerID: 640356195
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 10
   m_SortAtRoot: 0
 --- !u!114 &321096011
@@ -2845,7 +2845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98.59996, y: 163}
+  m_AnchoredPosition: {x: -501.0999, y: 428.73016}
   m_SizeDelta: {x: 73.44, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &545064115
@@ -3985,7 +3985,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225.5, y: 167.26985}
+  m_AnchoredPosition: {x: -628, y: 433}
   m_SizeDelta: {x: 382.62, y: 78.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905974787
@@ -5554,7 +5554,7 @@ SortingGroup:
   m_GameObject: {fileID: 1224472997}
   m_Enabled: 1
   m_SortingLayerID: 640356195
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 10
   m_SortAtRoot: 0
 --- !u!222 &1224473000
@@ -5785,7 +5785,7 @@ SortingGroup:
   m_GameObject: {fileID: 1278835573}
   m_Enabled: 1
   m_SortingLayerID: 640356195
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 10
   m_SortAtRoot: 0
 --- !u!222 &1278835576
@@ -6502,7 +6502,7 @@ SortingGroup:
   m_GameObject: {fileID: 1581714930}
   m_Enabled: 1
   m_SortingLayerID: 640356195
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 10
   m_SortAtRoot: 0
 --- !u!114 &1581714933
@@ -6853,7 +6853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -258, y: 163}
+  m_AnchoredPosition: {x: -660.5, y: 428.73016}
   m_SizeDelta: {x: 227.4, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1620705624
